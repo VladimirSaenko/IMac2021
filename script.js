@@ -1,33 +1,22 @@
 
 "use strict";
 
-let randomColor1 = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
-let randomColor2 = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
-let color1 = document.getElementById("color1");
-let color2 = document.getElementById("color2");
-document.documentElement.style.setProperty('--one-color', `${randomColor1}`);
-document.documentElement.style.setProperty('--second-color', `${randomColor2}`);
+let randomColor = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
+// let randomColor2 = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
+document.documentElement.style.setProperty('--one-color', `${randomColor}`);
+document.documentElement.style.setProperty('--second-color', `${randomColor}`);
+let colorInput = document.getElementById("colorInp");
 
-function getRandomColors() {
-    randomColor1 = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
-    randomColor2 = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
-    document.documentElement.style.setProperty('--one-color', `${randomColor1}`);
-    document.documentElement.style.setProperty('--second-color', `${randomColor2}`);
-}
+colorInput.addEventListener('input', () => {
+    document.documentElement.style.setProperty('--one-color', `${colorInput.value}`);
+    document.documentElement.style.setProperty('--second-color', `${colorInput.value}`);
+})
 
-function getColor1() {
-    document.documentElement.style.setProperty('--one-color', `${color1.value}`);
-    if(color1.value == '#000000') {
-        document.documentElement.style.setProperty('--one-color', `${randomColor1}`);
-    }
-}
-
-function getColor2() {
-    document.documentElement.style.setProperty('--second-color', `${color2.value}`);
-    if(color2.value == '#000000') {
-        document.documentElement.style.setProperty('--second-color', `${randomColor2}`);
-    }
-}
+document.querySelector('.randomColorBtn').addEventListener('click', () => {
+    randomColor = 'rgb(' + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + "," + getRandomInt(0, 255) + ")";
+    document.documentElement.style.setProperty('--one-color', `${randomColor}`);
+    document.documentElement.style.setProperty('--second-color', `${randomColor}`);
+})
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;

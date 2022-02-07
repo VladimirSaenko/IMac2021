@@ -50,19 +50,19 @@ button, input {
     margin: 0px 50px;
 }
 
-.randomColorsBtn {
-    width: 200px;
-    height: 50px;
+.randomColorBtn {
+    width: 250px;
+    height: 75px;
     background: black;
     border-radius: 20px;
     color: white;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     border: white 5px solid;
     font-weight: bold;
 }
 
-.randomColorsBtn:hover {
+.randomColorBtn:hover {
     color: black;
     background: white;
     font-weight: bolder;
@@ -122,9 +122,8 @@ button, input {
     position: absolute;
     width: 100%;
     height: 100%;
-    border: var(--borderSize) solid #ecedef;
+    border: var(--borderSize) solid var(--second-color);
     background: none;
-    box-shadow: 4vmin 4vmin 20vmin white inset;
     border-radius: 1vmin 1vmin 0 0;
     transform: translateZ(0.01vmin);
 }
