@@ -1,6 +1,6 @@
 # IMac2021
 
-## 3D версия IMac 2021 года, с возможностью изменения цвета
+## IMac 2021 года, с возможностью изменения цвета
 
 ## Codepen: https://codepen.io/vladimirsaenko/pen/LYOxPqr
 
